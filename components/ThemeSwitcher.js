@@ -29,7 +29,7 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <div className="w-full flex justify-end">
+    <div className="w-full h-10 flex justify-end">
       <button
         className={`relative w-[30px] md:w-[37.5px] h-[16px] md:h-[20.3px] bg-[#f76464] cursor-pointer rounded-[15px]  ${theme}`}
         onClick={toggleTheme}

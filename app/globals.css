@@ -28,3 +28,7 @@ body {
 body.dark {
   background-color: #0d0124;
 }
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
