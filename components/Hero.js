@@ -12,35 +12,28 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero w-full columns-2 mt-20">
-      <h1 className="hero__tittle font-extrabold text-[60px] text-start">
-        Find, book, rent a car—quick and super easy!
-      </h1>
-      <h2 className="hero__subtitle text-[26px] text-start">
-        Streamline your car rental experience with our effortless booking
-        process.
-      </h2>
-      <CustomButton
-        title="Explore Cars"
-        containerStyles="bg-blue-600 text-white rounded-full mt-10"
-        handleClick={handleScroll}
-      />
+    <div className="hero">
+      <div className="flex-1 pt-36 padding-x">
+        <h1 className="hero__title">
+          Find, book, rent a car — quick and super easy!
+        </h1>
 
-      <div className="hero__img-wrapper w-full">
-        <Image
-          className=""
-          width={800}
-          height={1}
-          src={"hero.png"}
-          alt="hero"
+        <p className="hero__subtitle">
+          Streamline your car rental experience with our effortless booking
+          process.
+        </p>
+
+        <CustomButton
+          title="Explore Cars"
+          containerStyles="bg-blue-600 rounded-full mt-10"
+          handleClick={handleScroll}
         />
-        <div className="hero__image-overlay">
-          <img
-            src={"hero-bg.png"}
-            alt="hero-bg"
-            className="absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden"
-          />
+      </div>
+      <div className="hero__image-container">
+        <div className="hero__image">
+          <Image src="/hero.png" alt="hero" fill className="object-contain" />
         </div>
+        <div className="hero__image-overlay" />
       </div>
     </div>
   );

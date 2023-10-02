@@ -5,9 +5,9 @@ import { headers } from "../next.config";
 
 const NavBar = () => {
   return (
-    <header className="w-full h-10">
-      <nav className="w-full">
-        <div className="w-full columns-2 px-1 max-sm:px-3 sm:px-5 md:px-8 ">
+    <header className="w-full absolute z-10">
+      <nav className="max-width mx-auto justify-between items-center sm:px-16 px-6 py-4">
+        <div className="columns-2 px-1 ">
           <Logo />
           <ThemeSwitcher />
         </div>
@@ -17,3 +17,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+//
