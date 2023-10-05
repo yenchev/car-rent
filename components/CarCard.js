@@ -1,0 +1,54 @@
+import Image from "next/image";
+import React from "react";
+import { images } from "../next.config";
+import { calculateCarRent } from "../utils";
+
+const CarCard = ({ car }) => {
+  return (
+    <div className="car__card w-[330px] h-[450px] mx-auto my-1 text-center px-5 py-5 bg-stone-200 dark:bg-gray-900  dark:shadow-gray-800 rounded-3xl shadow-custom hover:shadow-hover">
+      <div className="h-[15%]">
+        <p className="text-start  text-[25px] leading-7 font-bold capitalize">
+          {car.make} {car.model}
+        </p>
+      </div>
+      <div className="h-[85%]">
+        <p className="text-start text-[25px] py-3">
+          <span className="inline-block align-top text-[18px]">$</span>
+          <span className="font-extrabold">
+            {calculateCarRent(car.city_mpg, car.year)}
+          </span>
+          <span className="inline-block align-bottom text-[17px]">/day</span>
+        </p>
+        <Image
+          src={"hero.png"}
+          alt="car"
+          width={700}
+          height={1}
+          className="py-5"
+        />
+        <div className="flex-col columns-3 mt-2">
+          <div>
+            <img
+              src="steering-wheel.svg"
+              alt="transmission"
+              className="mx-auto w-5"
+            />
+            <p className="mt-1">
+              {car.transmission === "a" ? "automatic" : "manual"}
+            </p>
+          </div>
+          <div>
+            <img src="tire.svg" alt="tire" className="mx-auto w-5" />
+            <p className="mt-1">{car.drive}</p>
+          </div>
+          <div>
+            <img src="gas.svg" alt="gas" className="mx-auto w-5" />
+            <p className="mt-1">{car.combination_mpg}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CarCard;

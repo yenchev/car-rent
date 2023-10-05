@@ -6,13 +6,13 @@ import Image from "next/image";
 const Hero = () => {
   const handleScroll = () => {
     window.scrollTo({
-      top: 600,
+      top: 850,
       behavior: "smooth",
     });
   };
 
   return (
-    <div className="hero">
+    <div className="hero ">
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
           Find, book, rent a car — quick and super easy!
@@ -25,7 +25,7 @@ const Hero = () => {
 
         <CustomButton
           title="Explore Cars"
-          containerStyles="bg-blue-600 rounded-full mt-10"
+          containerStyles="bg-blue-600 rounded-full mt-10 "
           handleClick={handleScroll}
         />
       </div>
@@ -34,10 +34,12 @@ const Hero = () => {
           <Image src={"hero.png"} alt="hero" fill className="object-contain" />
         </div>
         <div className="hero__image-overlay">
-          <img
+          <Image
             src={"hero-bg.png"}
             alt="hero-bg"
             className="hero__image-overlay"
+            width={1}
+            height={1}
           />
         </div>
       </div>

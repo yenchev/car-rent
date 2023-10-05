@@ -9,13 +9,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+  user-select: none;
 }
 
 body {
-  background-color: beige;
+  background-color: rgb(237, 237, 237);
 }
 body.dark {
-  background-color: #0d0124;
+  background-color: #0b001d;
+  color: rgb(188, 188, 189);
 }
 
 .max-width {
@@ -39,9 +41,9 @@ body.dark {
 }
 
 .custom-btn {
-  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none dark:text-slate-100;
 }
-/* ////////////////////////////////////////////////////////// */
+/* Hero start */
 .hero {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
@@ -65,4 +67,4 @@ body.dark {
 .hero__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/4 -right-9 bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
 }
-/* ///////////////////////////////////////////////////////////////// */
+/* Hero end */
