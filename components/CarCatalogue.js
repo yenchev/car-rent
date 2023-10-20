@@ -7,7 +7,6 @@ const CarCatalogue = ({ cars }) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    // Показуємо кнопку після завантаження перших CarCard
     setShowButton(true);
   }, []);
 
@@ -18,12 +17,12 @@ const CarCatalogue = ({ cars }) => {
   };
 
   return (
-    <div className="car__catalog-wrapper">
-      <div className="car__catalog-header max-width px-16">
-        <h2 className="car__catalog-title text-[40px] font-extrabold">
+    <div className="car__catalog-wrapper pt-10">
+      <div className="car__catalog-header max-width md:px-16 px-6">
+        <h2 className="car__catalog-title text-[25px] sm:text-[40px] font-extrabold">
           Car Catalogue
         </h2>
-        <h3 className="car__catalog-subtitle text-[18px] pb-6">
+        <h3 className="car__catalog-subtitle text-[15px] sm:text-[18px] pb-6">
           Explore our cars you might like
         </h3>
         <div className="car__catalog-filter max-width pb-10">Filter</div>
