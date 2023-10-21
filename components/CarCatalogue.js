@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from "react";
 import CarCard from "./CarCard";
-import CustomButton from "./CustomButton";
 
 const CarCatalogue = ({ cars }) => {
   const [visibleCars, setVisibleCars] = useState(12);
-  const [showButton, setShowButton] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop >=
+      document.documentElement.offsetHeight
+    ) {
+      setIsLoading(true);
+      setTimeout(() => {
+        setVisibleCars((prevVisibleCars) =>
+          prevVisibleCars < 48 ? prevVisibleCars + 12 : prevVisibleCars
+        );
+        setIsLoading(false);
+      }, 1000);
+    }
+  };
 
   useEffect(() => {
-    setShowButton(true);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
-
-  const handleShowMore = () => {
-    setVisibleCars((prevVisibleCars) =>
-      prevVisibleCars < 48 ? prevVisibleCars + 12 : prevVisibleCars
-    );
-  };
 
   return (
     <div className="car__catalog-wrapper pt-10">
@@ -34,14 +45,11 @@ const CarCatalogue = ({ cars }) => {
           </div>
         ))}
       </div>
-      {showButton && visibleCars < 48 && (
-        <div className="car__catalog-button">
-          <CustomButton
-            title="Show More"
-            containerStyles="rounded-full my-10 mx-auto bg-blue-600 transition duration-75"
-            handleClick={handleShowMore}
-          />
-        </div>
+      {isLoading && visibleCars < 48 && (
+        <span class="relative flex mx-auto mb-10 h-10 w-10">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-10 w-10 bg-sky-500"></span>
+        </span>
       )}
     </div>
   );
