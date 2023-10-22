@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CarCard from "./CarCard";
+import Filter from "./Filter";
 
 const CarCatalogue = ({ cars }) => {
   const [visibleCars, setVisibleCars] = useState(12);
@@ -36,7 +37,9 @@ const CarCatalogue = ({ cars }) => {
         <h3 className="car__catalog-subtitle text-[15px] sm:text-[18px] pb-6">
           Explore our cars you might like
         </h3>
-        <div className="car__catalog-filter max-width pb-10">Filter</div>
+        <div className="car__catalog-filter max-width pb-10">
+          <Filter />
+        </div>
       </div>
       <div className="car__catalog-cards mx-auto 2xl:w-[1440px] xl:w-[1100px] lg:w-[1000px] md:w-[700px] sm:w-[600px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 sm:gap-4 lg:gap-4 gap-10 mb-[50px]">
         {cars.slice(0, visibleCars).map((car, index) => (
