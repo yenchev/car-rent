@@ -3,41 +3,41 @@ import React from "react";
 const Filter = () => {
   return (
     <div class="container mx-auto justify-center items-center p-2 md:p-0">
-      <div class=" max-width 2xl:w-[100%] xl:w-[1100px] lg:w-[880px] bg-blue-600  dark:bg-gray-900  dark:shadow-gray-800 shadow-custom p-4 sm:p-2 xl:p-4  grid grid-cols-1 gap-6 rounded-full">
-        <div class="flex mx-auto justify-around flex-col md:flex-row">
-          <div className="pt-6 md:pt-0 md:pl-6 ">
+      <div class=" mx-auto max-width 2xl:w-[100%] xl:w-[1100px] lg:w-[880px] lg:bg-blue-600  lg:dark:bg-gray-900  lg:dark:shadow-gray-800 lg:shadow-custom p-4 sm:p-2 xl:p-4  grid grid-cols-1 gap-6 rounded-xl">
+        <div class="flex justify-around flex-col lg:flex-row w-full mx-auto">
+          <div className="lg:pt-0 lg:pl-6 2xl:pr-6">
             <div>
               <input
                 type="text"
                 placeholder="Make..."
-                class=" max-w-full focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[160px]   items-center py-2 px-4  bg-blue-100 dark:bg-blue-800"
+                class="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px]  items-center py-2 px-4  bg-blue-500 dark:bg-blue-800 w-full mx-auto"
               />
             </div>
           </div>
-          <div className="pt-6 md:pt-0 md:pl-6">
+          <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
             <div>
               <input
                 type="text"
                 placeholder="Model..."
-                class=" max-w-full focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[160px]   items-center py-2 px-4  bg-blue-100 dark:bg-blue-800"
+                class="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px]  items-center py-2 px-4   bg-blue-500 dark:bg-blue-800 w-full mx-auto"
               />
             </div>
           </div>
-          <div class="pt-6 md:pt-0 md:pl-6">
-            <select class="2xl:w-[250px] xl:w-[220px] lg:w-[160px] py-2 px-4 rounded  bg-blue-100 dark:bg-blue-800">
-              <option className="bg-gray-400 text-black">diesel</option>
-              <option className="bg-gray-400 text-black">patrol</option>
-              <option className="bg-gray-400 text-black">electric</option>
+          <div class="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
+            <select class="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-2 px-4 rounded  bg-blue-500 dark:bg-blue-800 w-full mx-auto">
+              <option>diesel</option>
+              <option>patrol</option>
+              <option>electric</option>
             </select>
           </div>
-          <div class="pt-6 md:pt-0 md:pl-6">
-            <select class="2xl:w-[250px] xl:w-[220px] lg:w-[160px]  py-2 px-4 rounded  bg-blue-100 dark:bg-blue-800">
+          <div class="pt-3 lg:pt-0 lg:pl-6 2xl:pr-4">
+            <select class="2xl:w-[250px] xl:w-[220px] lg:w-[170px]  py-2 px-4 rounded  bg-blue-500 dark:bg-blue-800 w-full mx-auto">
               <option>manual</option>
               <option>automatic</option>
             </select>
           </div>
-          <div class="flex justify-center md:px-6">
-            <button class="w-10 h-10 p-2 rounded-full bg-blue-100 dark:bg-blue-800">
+          <div class="flex justify-center pt-3 lg:pt-0 lg:px-6 2xl:pr-6">
+            <button class="lg:w-10 lg:h-10 lg:p-2 w-28 h-8 px-11 rounded-full  bg-blue-500 dark:bg-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
