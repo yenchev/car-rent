@@ -10,7 +10,7 @@ const Filter = () => {
               <input
                 type="text"
                 placeholder="Make..."
-                className="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px] placeholder:text-black dark:placeholder:text-gray-200 items-center py-2 px-4 bg-blue-100 dark:bg-blue-800 w-full mx-auto"
+                className="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px] placeholder:text-black dark:placeholder:text-gray-200 items-center py-1 lg:py-2 px-4 bg-blue-400 lg:bg-blue-100 dark:bg-blue-800 w-full mx-auto"
               />
             </div>
           </div>
@@ -19,25 +19,25 @@ const Filter = () => {
               <input
                 type="text"
                 placeholder="Model..."
-                className="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px] items-center py-2 px-4 dark:placeholder:text-gray-200 placeholder:text-black bg-blue-100 dark:bg-blue-800 w-full mx-auto"
+                className="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px] items-center py-1 lg:py-2 px-4 dark:placeholder:text-gray-200 placeholder:text-black bg-blue-400 lg:bg-blue-100 dark:bg-blue-800 w-full mx-auto"
               />
             </div>
           </div>
           <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
-            <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-2 px-4 rounded bg-blue-100 dark:bg-blue-800  dark:text-gray-200 w-full mx-auto outline-none">
+            <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-1 lg:py-2 px-4 rounded bg-blue-400 lg:bg-blue-100 dark:bg-blue-800  dark:text-gray-200 w-full mx-auto outline-none">
               <option className="hover:bg-red-500">дизель</option>
               <option className="hover:bg-red-500">бензин</option>
               <option className="hover:bg-red-500">електричний</option>
             </select>
           </div>
           <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-4">
-            <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-2 px-4 rounded bg-blue-100 dark:bg-blue-800 dark:text-gray-200 w-full mx-auto outline-none">
+            <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-1 lg:py-2 px-4 rounded bg-blue-400 lg:bg-blue-100 dark:bg-blue-800 dark:text-gray-200 w-full mx-auto outline-none">
               <option>manual</option>
               <option>automatic</option>
             </select>
           </div>
           <div className="flex justify-center pt-3 lg:pt-0 lg:px-6 2xl:pr-6">
-            <button className="lg:w-10 lg:h-10 lg:p-2 w-28 h-8 px-11 rounded-full bg-blue-100 dark:bg-blue-600 hover:bg-blue-200 dark:hover:bg-blue-500">
+            <button className="lg:w-10 lg:h-10 lg:p-2 w-10 h-10 px-2 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-600 lg:hover:bg-blue-200 dark:hover:bg-blue-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
