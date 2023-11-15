@@ -2,15 +2,15 @@ import React from "react";
 
 const Filter = () => {
   return (
-    <div class="container mx-auto justify-center items-center p-2 md:p-0">
-      <div class=" mx-auto max-width 2xl:w-[100%] xl:w-[1100px] lg:w-[880px] lg:bg-blue-600  lg:dark:bg-gray-900  lg:dark:shadow-gray-800 lg:shadow-custom p-4 sm:p-2 xl:p-4  grid grid-cols-1 gap-6 rounded-xl">
-        <div class="flex justify-around flex-col lg:flex-row w-full mx-auto">
+    <div className="container mx-auto justify-center items-center p-2 md:p-0">
+      <div className="mx-auto max-width 2xl:w-[100%] xl:w-[1100px] lg:w-[880px] lg:bg-blue-400 lg:dark:bg-gray-900 lg:dark:shadow-gray-800 lg:shadow-custom p-4 sm:p-2 xl:p-2 grid grid-cols-1 gap-6 rounded-xl">
+        <div className="flex justify-around flex-col lg:flex-row w-full mx-auto">
           <div className="lg:pt-0 lg:pl-6 2xl:pr-6">
             <div>
               <input
                 type="text"
                 placeholder="Make..."
-                class="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px]  items-center py-2 px-4  bg-blue-500 dark:bg-blue-800 w-full mx-auto"
+                className="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px] placeholder:text-black dark:placeholder:text-gray-200 items-center py-2 px-4 bg-blue-100 dark:bg-blue-800 w-full mx-auto"
               />
             </div>
           </div>
@@ -19,25 +19,25 @@ const Filter = () => {
               <input
                 type="text"
                 placeholder="Model..."
-                class="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px]  items-center py-2 px-4   bg-blue-500 dark:bg-blue-800 w-full mx-auto"
+                className="focus:outline-none flex rounded 2xl:w-[250px] xl:w-[220px] lg:w-[170px] items-center py-2 px-4 dark:placeholder:text-gray-200 placeholder:text-black bg-blue-100 dark:bg-blue-800 w-full mx-auto"
               />
             </div>
           </div>
-          <div class="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
-            <select class="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-2 px-4 rounded  bg-blue-500 dark:bg-blue-800 w-full mx-auto">
-              <option>diesel</option>
-              <option>patrol</option>
-              <option>electric</option>
+          <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
+            <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-2 px-4 rounded bg-blue-100 dark:bg-blue-800  dark:text-gray-200 w-full mx-auto outline-none">
+              <option className="hover:bg-red-500">дизель</option>
+              <option className="hover:bg-red-500">бензин</option>
+              <option className="hover:bg-red-500">електричний</option>
             </select>
           </div>
-          <div class="pt-3 lg:pt-0 lg:pl-6 2xl:pr-4">
-            <select class="2xl:w-[250px] xl:w-[220px] lg:w-[170px]  py-2 px-4 rounded  bg-blue-500 dark:bg-blue-800 w-full mx-auto">
+          <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-4">
+            <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-2 px-4 rounded bg-blue-100 dark:bg-blue-800 dark:text-gray-200 w-full mx-auto outline-none">
               <option>manual</option>
               <option>automatic</option>
             </select>
           </div>
-          <div class="flex justify-center pt-3 lg:pt-0 lg:px-6 2xl:pr-6">
-            <button class="lg:w-10 lg:h-10 lg:p-2 w-28 h-8 px-11 rounded-full  bg-blue-500 dark:bg-blue-600">
+          <div className="flex justify-center pt-3 lg:pt-0 lg:px-6 2xl:pr-6">
+            <button className="lg:w-10 lg:h-10 lg:p-2 w-28 h-8 px-11 rounded-full bg-blue-100 dark:bg-blue-600 hover:bg-blue-200 dark:hover:bg-blue-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
