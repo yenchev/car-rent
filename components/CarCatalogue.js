@@ -4,30 +4,23 @@ import Filter from "./Filter";
 
 const CarCatalogue = ({ cars }) => {
   const [visibleCars, setVisibleCars] = useState(12);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop >=
-      document.documentElement.offsetHeight
-    ) {
-      setIsLoading(true);
-      setTimeout(() => {
-        setVisibleCars((prevVisibleCars) =>
-          prevVisibleCars < 48 ? prevVisibleCars + 12 : prevVisibleCars
-        );
-        setIsLoading(false);
-      }, 1000);
-    }
-  };
 
   useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const totalHeight = document.documentElement.scrollHeight;
+
+      if (totalHeight - scrolled <= 1 && visibleCars < 48) {
+        setVisibleCars((prevVisibleCars) => prevVisibleCars + 12);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
+  }, [visibleCars]);
   return (
     <div className="car__catalog-wrapper pt-10">
       <div className="car__catalog-header max-width md:px-16 px-6">
@@ -48,14 +41,17 @@ const CarCatalogue = ({ cars }) => {
           </div>
         ))}
       </div>
-      {isLoading && visibleCars < 48 && (
-        <span class="relative flex mx-auto mb-10 h-10 w-10">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-10 w-10 bg-sky-500"></span>
-        </span>
-      )}
     </div>
   );
 };
 
 export default CarCatalogue;
+
+{
+  /* {isLoading && visibleCars < 48 && (
+  <span className="relative flex mx-auto mb-10 h-10 w-10">
+    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-10 w-10 bg-sky-500"></span>
+  </span>
+)} */
+}
