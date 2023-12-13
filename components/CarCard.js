@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { images } from "../next.config";
 import { calculateCarRent } from "../utils";
 
 const CarCard = ({ car }) => {
@@ -43,7 +42,7 @@ const CarCard = ({ car }) => {
           </div>
           <div>
             <img src="gas.svg" alt="gas" className="mx-auto w-5" />
-            <p className="mt-1">{car.combination_mpg}</p>
+            <p className="mt-1">{car.fuel_type}</p>
           </div>
         </div>
       </div>

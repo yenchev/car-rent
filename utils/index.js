@@ -1,10 +1,22 @@
 import axios from "axios";
 
-export const fetchCars = async (make, model, limit) => {
+export const fetchCars = async (
+  modelQ,
+  makeQ = "audi",
+  transmissionQ,
+  fuel_typeQ,
+  limitQ
+) => {
   const options = {
     method: "GET",
-    url: `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${make}&model=${model}&limit=${limit}`,
-    params: { make: "a", model: "", limit: "48" },
+    url: `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars`,
+    params: {
+      model: "",
+      make: makeQ,
+      transmission: "a",
+      fuel_type: "gas",
+      limit: "48",
+    },
     headers: {
       "X-RapidAPI-Key": "385891811bmshb7b541a5ab12492p13999cjsneb475bab7416",
       "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
@@ -28,3 +40,5 @@ export const calculateCarRent = (city_mpg, year) => {
   const rentalRatePerDay = basePricePerDay + mileageRate + ageRate;
   return rentalRatePerDay.toFixed(0);
 };
+
+// &transmission=${transmission}&fuel_type=${fuel_type}

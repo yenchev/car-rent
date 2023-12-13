@@ -9,7 +9,6 @@ const CustomButton = ({
   btnType,
   textStyles,
   rightIcon,
-  limit,
 }) => {
   return (
     <button

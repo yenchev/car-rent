@@ -25,9 +25,9 @@ const Filter = () => {
           </div>
           <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
             <select className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] py-1 lg:py-2 px-4 rounded bg-blue-400 lg:bg-blue-100 dark:bg-blue-800  dark:text-gray-200 w-full mx-auto outline-none">
-              <option className="hover:bg-red-500">дизель</option>
-              <option className="hover:bg-red-500">бензин</option>
-              <option className="hover:bg-red-500">електричний</option>
+              <option className="hover:bg-red-500">diesel</option>
+              <option className="hover:bg-red-500">gas</option>
+              <option className="hover:bg-red-500">electricity</option>
             </select>
           </div>
           <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-4">
