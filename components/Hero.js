@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <div className="hero" ref={heroRef}>
-      <div className="flex-1 pt-36 padding-x">
+      <div className="hero__text-container flex-1 pt-36 padding-x">
         <h1 className="hero__title">
           Find, book, rent a car — quick and super easy!
         </h1>

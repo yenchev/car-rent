@@ -41,7 +41,7 @@ body.dark {
 }
 
 .custom-btn {
-  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none dark:text-slate-100;
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none text-slate-100 dark:text-slate-100;
 }
 /* Hero start */
 .hero {
@@ -65,6 +65,6 @@ body.dark {
 }
 
 .hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/4 -right-9 bg-repeat-round -z-10 w-full xl:h-screen sm:h-[590px] h-[450px]  overflow-hidden;
+  @apply absolute xl:-top-24 xl:-right-1/4 -right-9 bg-repeat-round -z-10 w-full xl:h-screen sm:h-[590px] h-[450px]  overflow-visible;
 }
 /* Hero end */
