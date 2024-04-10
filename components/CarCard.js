@@ -4,7 +4,7 @@ import { calculateCarRent } from "../utils";
 
 const CarCard = ({ car }) => {
   return (
-    <div className="car__card w-[300px] h-[430px] sm:w-[280px] md:w-[300px] sm:h-[430px] mx-auto my-1 text-center px-5 py-5 bg-stone-200 dark:bg-gray-900 dark:shadow-gray-700 rounded-3xl shadow-custom xl:hover:shadow-hover dark:hover:shadow-gray-700">
+    <div className="car__card w-[300px] h-[430px] sm:w-[280px] md:w-[300px] sm:h-[430px] mx-auto my-1 text-center px-5 py-5 bg-stone-200 dark:bg-gray-800 dark:shadow-gray-800 rounded-3xl shadow-custom xl:hover:shadow-hover dark:hover:shadow-gray-700">
       <div className="h-[15%]">
         <p className="text-start  text-[25px] leading-7 font-bold capitalize">
           {car.make} {car.model}

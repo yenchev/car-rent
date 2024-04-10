@@ -3,7 +3,7 @@ import CarCard from "./CarCard";
 import Filter from "./Filter";
 import CustomButton from "./CustomButton";
 
-const CarCatalogue = ({ cars }) => {
+const CarCatalogue = ({ cars, updateCars }) => {
   const [visibleCars, setVisibleCars] = useState(12);
 
   const loadMore = () => {
@@ -20,7 +20,7 @@ const CarCatalogue = ({ cars }) => {
           Explore our cars you might like
         </h3>
         <div className="car__catalog-filter max-width pb-10">
-          <Filter />
+          <Filter onFilterSubmit={updateCars} />
         </div>
       </div>
       <div className="car__catalog-cards mx-auto 2xl:w-[1440px] xl:w-[1100px] lg:w-[1000px] md:w-[700px] sm:w-[600px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 sm:gap-4 lg:gap-4 gap-10 mb-[50px] ">
