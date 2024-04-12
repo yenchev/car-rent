@@ -3,24 +3,19 @@ import React, { useEffect, useState } from "react";
 import CarCatalogue from "../components/CarCatalogue";
 import Hero from "../components/Hero";
 import { fetchCars } from "../utils";
-import LoadingNoResultsMessage from "../components/LoadingNoResultsMessage"; // Імпорт нового компонента
+import LoadingMessage from "../components/LoadingMessage";
 
 export default function Home() {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [noResults, setNoResults] = useState(false);
+  const [noResults] = useState(false);
 
   useEffect(() => {
     async function getCars() {
       try {
         const fetchedCars = await fetchCars();
         setLoading(false);
-        if (fetchedCars.length === 0) {
-          setNoResults(true);
-        } else {
-          setCars(fetchedCars);
-          setNoResults(false);
-        }
+        setCars(fetchedCars);
       } catch (error) {
         console.error(error);
         setLoading(false);
@@ -34,12 +29,7 @@ export default function Home() {
     try {
       const fetchedCars = await fetchCars(make, model, transmission, fuelType);
       setLoading(false);
-      if (fetchedCars.length === 0) {
-        setNoResults(true);
-      } else {
-        setCars(fetchedCars);
-        setNoResults(false);
-      }
+      setCars(fetchedCars);
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -49,8 +39,8 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <LoadingNoResultsMessage loading={loading} noResults={noResults} />
-      {!loading && !noResults && (
+      {loading && <LoadingMessage loading={loading} />}
+      {!loading && (
         <CarCatalogue
           cars={cars.map((car, index) => ({ ...car, key: index }))}
           updateCars={updateCars}

@@ -25,15 +25,15 @@ const Filter = ({ onFilterSubmit }) => {
   };
 
   return (
-    <div className="container mx-auto justify-center items-center p-2 md:p-0">
-      <div className="mx-auto max-width 2xl:w-[100%] xl:w-[1100px] lg:w-[880px] lg:bg-blue-400 lg:dark:bg-gray-800 lg:dark:shadow-gray-800 lg:shadow-custom p-4 sm:p-2 xl:p-2 grid grid-cols-1 gap-6 rounded-xl">
-        <div className="flex justify-around flex-col lg:flex-row mx-auto">
-          <div className="lg:pt-0 lg:pl-6 2xl:pr-6">
+    <div className="container w-full mx-auto justify-around p-2 md:p-0">
+      <div className="mx-auto w-full 2xl:w-[100%] xl:w-[1100px] lg:w-[880px]  lg:bg-blue-400 lg:dark:bg-gray-800 lg:dark:shadow-gray-800 lg:shadow-custom p-4 sm:p-2 xl:p-2 grid grid-cols-1 gap-6 rounded-xl">
+        <div className="flex justify-around flex-col lg:flex-row mx-auto w-full ">
+          <div className="md:pt-0 mx-auto w-full text-center">
             <select
               name="make"
               value={make}
               onChange={handleInputChange}
-              className="focus:outline-none flex rounded-full 2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[350px] placeholder:text-black dark:text-gray-200 items-center py-1 lg:py-2 px-4 bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 w-full mx-auto"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
               <option value="">Make...</option>
               {carMakes.map((carMake, index) => (
@@ -43,12 +43,12 @@ const Filter = ({ onFilterSubmit }) => {
               ))}
             </select>
           </div>
-          <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
+          <div className="pt-3 lg:pt-0 mx-auto w-full text-center">
             <select
               name="model"
               value={model}
               onChange={handleInputChange}
-              className="focus:outline-none flex rounded-full 2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[350px] items-center py-1 lg:py-2 px-4 dark:text-gray-200 placeholder:text-black bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 w-full mx-auto"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
               <option value="">Model...</option>
               {carModels[make]?.map((carModel, index) => (
@@ -58,30 +58,30 @@ const Filter = ({ onFilterSubmit }) => {
               ))}
             </select>
           </div>
-          <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-6">
+          <div className="pt-3 lg:pt-0  mx-auto w-full text-center">
             <select
               name="fuelType"
               value={fuelType}
               onChange={handleInputChange}
-              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[350px] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
               <option value="diesel">Diesel</option>
               <option value="gas">Gas</option>
               <option value="electricity">Electricity</option>
             </select>
           </div>
-          <div className="pt-3 lg:pt-0 lg:pl-6 2xl:pr-4">
+          <div className="pt-3 lg:pt-0 mx-auto w-full text-center">
             <select
               name="transmission"
               value={transmission}
               onChange={handleInputChange}
-              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[350px] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
               <option value="m">Manual</option>
               <option value="a">Automatic</option>
             </select>
           </div>
-          <div className="flex justify-center pt-3 lg:pt-0 lg:px-6 2xl:pr-6">
+          <div className="flex justify-center pt-3 lg:pt-0 mx-auto">
             <button
               onClick={handleFilterSubmit}
               className="lg:w-10 lg:h-10 lg:p-2 w-10 h-10 px-2 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-700 lg:hover:bg-blue-200 dark:hover:bg-blue-500"
