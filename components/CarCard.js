@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { calculateCarRent } from "../utils";
+import { calculateCarRent, generateCarImageUrl } from "../utils";
 
 const CarCard = ({ car }) => {
   return (
@@ -11,7 +11,7 @@ const CarCard = ({ car }) => {
         </p>
       </div>
       <div className="h-[85%]">
-        <p className="text-start text-[25px] py-3">
+        <p className="text-start text-[25px] pb-3 pt-5 ">
           <span className="inline-block align-top text-[18px]">$</span>
           <span className="font-extrabold">
             {calculateCarRent(car.city_mpg, car.year)}
@@ -19,7 +19,7 @@ const CarCard = ({ car }) => {
           <span className="inline-block align-bottom text-[17px]">/day</span>
         </p>
         <Image
-          src={"hero.png"}
+          src={generateCarImageUrl(car)}
           alt="car"
           width={700}
           height={1}
