@@ -12,7 +12,7 @@ export const fetchCars = async (
     method: "GET",
     url: `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars`,
     params: {
-      make: make || "audi",
+      make: make === "" ? "audi" : make,
       model: model || "",
       fuel_type: fuelType || "gas",
       transmission: transmission || "a",
