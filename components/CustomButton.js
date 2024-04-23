@@ -14,7 +14,7 @@ const CustomButton = ({
     <button
       disabled={false}
       type={btnType || "button"}
-      className={`custom-btn hover:bg-blue-500 bg-blue-600  ${containerStyles}`}
+      className={`custom-btn lg:hover:bg-blue-500 bg-blue-600 active:bg-blue-500 dark:active:bg-blue-900 lg:dark:active:bg-blue-500  ${containerStyles}`}
       onClick={handleClick}
     >
       <span className={`flex-1 ${textStyles}`}>{title}</span>

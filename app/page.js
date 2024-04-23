@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      {loading && <LoadingMessage loading={loading} />}
+      {loading && <LoadingMessage />}
       {!loading && (
         <CarCatalogue
           cars={cars.map((car, index) => ({ ...car, key: index }))}

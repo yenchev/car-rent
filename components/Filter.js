@@ -25,15 +25,15 @@ const Filter = ({ onFilterSubmit }) => {
   };
 
   return (
-    <div className="container w-full mx-auto justify-around p-2 md:p-0">
-      <div className="mx-auto w-full 2xl:w-[100%] xl:w-[1100px] lg:w-[880px]  lg:bg-blue-400 lg:dark:bg-gray-800 lg:dark:shadow-gray-800 lg:shadow-custom p-4 sm:p-2 xl:p-2 grid grid-cols-1 gap-6 rounded-xl">
-        <div className="flex justify-around flex-col lg:flex-row mx-auto w-full ">
+    <div className="container w-full mx-auto flex justify-between p-2 md:p-0">
+      <div className="mx-auto w-full flex justify-between 2xl:w-[100%] xl:w-[1100px] lg:w-[880px] bg-blue-400 dark:bg-gray-800 dark:shadow-gray-800 shadow-custom p-2 rounded-xl">
+        <div className="flex justify-between flex-col lg:flex-row mx-auto w-full">
           <div className="md:pt-0 mx-auto w-full text-center">
             <select
               name="make"
               value={make}
               onChange={handleInputChange}
-              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full  bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
               <option value="">Make...</option>
               {carMakes.map((carMake, index) => (
@@ -48,7 +48,7 @@ const Filter = ({ onFilterSubmit }) => {
               name="model"
               value={model}
               onChange={handleInputChange}
-              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full  bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
               <option value="">Model...</option>
               {carModels[make]?.map((carModel, index) => (
@@ -63,10 +63,10 @@ const Filter = ({ onFilterSubmit }) => {
               name="fuelType"
               value={fuelType}
               onChange={handleInputChange}
-              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full  bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
-              <option value="diesel">Diesel</option>
               <option value="gas">Gas</option>
+              <option value="diesel">Diesel</option>
               <option value="electricity">Electricity</option>
             </select>
           </div>
@@ -75,16 +75,16 @@ const Filter = ({ onFilterSubmit }) => {
               name="transmission"
               value={transmission}
               onChange={handleInputChange}
-              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
+              className="2xl:w-[250px] xl:w-[220px] lg:w-[170px] md:w-[90%] py-1 lg:py-2 px-4 rounded-full  bg-blue-100 dark:bg-blue-900 dark:text-gray-200 w-full mx-auto outline-none"
             >
-              <option value="m">Manual</option>
               <option value="a">Automatic</option>
+              <option value="m">Manual</option>
             </select>
           </div>
-          <div className="flex justify-center pt-3 lg:pt-0 mx-auto">
+          <div className="pt-3 px-4 lg:pt-0 mx-auto w-max">
             <button
               onClick={handleFilterSubmit}
-              className="lg:w-10 lg:h-10 lg:p-2 w-10 h-10 px-2 rounded-full bg-blue-400 lg:bg-blue-100 dark:bg-blue-700 lg:hover:bg-blue-200 dark:hover:bg-blue-500"
+              className="lg:p-2 lg:w-10 lg:h-10 w-22 px-7 h-8 rounded-full  bg-blue-100 dark:bg-blue-800 lg:hover:bg-blue-200 lg:dark:hover:bg-blue-700 active:bg-blue-200 dark:active:bg-blue-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
