@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: rgb(237, 237, 237);
+  background-color: rgba(89, 89, 255, 0.107);
 }
 body.dark {
   background-color: #0b001d;
@@ -47,7 +47,7 @@ body.dark {
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none text-slate-100 dark:text-slate-100;
 }
-/* Hero start */
+
 .hero {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
@@ -71,4 +71,3 @@ body.dark {
 .hero__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/4 -right-9 bg-repeat-round -z-10 w-full xl:h-screen sm:h-[590px] h-[450px]  overflow-visible;
 }
-/* Hero end */

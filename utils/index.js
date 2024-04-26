@@ -1,5 +1,4 @@
 import axios from "axios";
-// import Filter from "../components/Filter";
 
 export const fetchCars = async (
   make,
@@ -12,7 +11,7 @@ export const fetchCars = async (
     method: "GET",
     url: `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars`,
     params: {
-      make: make === "" ? "audi" : make,
+      make: make,
       model: model || "",
       fuel_type: fuelType || "gas",
       transmission: transmission || "a",
@@ -49,9 +48,9 @@ export const generateCarImageUrl = (car, angle) => {
 
   url.searchParams.append("customer", "hrjavascript-mastery");
   url.searchParams.append("make", make);
-  url.searchParams.append("modelFamily", model.charAt(0));
+  url.searchParams.append("modelFamily", model);
   url.searchParams.append("zoomeType", "fullscreen");
-  url.searchParams.append("modelYear", `${year}`);
+  // url.searchParams.append("modelYear", `${year}`);
   if (angle !== undefined && angle !== null) {
     url.searchParams.append("angle", `${angle}`);
   }

@@ -8,7 +8,6 @@ import LoadingMessage from "../components/LoadingMessage";
 export default function Home() {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [noResults] = useState(false);
 
   useEffect(() => {
     async function getCars() {

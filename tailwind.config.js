@@ -11,8 +11,8 @@ module.exports = {
         pattern: "url('/pattern.png')",
       },
       boxShadow: {
-        custom: "0 0 30px -10px rgba(0, 0, 0, 0.3)",
-        hover: "0 0 35px -4px rgba(0,0,0,0.3)",
+        custom: "0 0 15px -4px rgba(0,0,0,0.3)",
+        hover: "0 0 20px -4px rgba(0,0,0,0.3)",
       },
     },
   },
